@@ -35,7 +35,7 @@ public class FindLoopStart {
 
         // Phase 2: Find loop start
         slow = head;
-        while (fast != null) {
+        while (slow != fast) {
             slow = slow.next;
             fast = fast.next;
         }
@@ -57,7 +57,7 @@ public class FindLoopStart {
 
         Node loopStart = findLoopStart(head);
         if (loopStart != null) {
-            System.out.println("Loop starts at with node value: " + loopStart);
+            System.out.println("Loop starts at with node value: " + loopStart.data);
         } else {
             System.out.println("No loop detected");
         }
